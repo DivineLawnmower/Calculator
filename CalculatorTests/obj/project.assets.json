@@ -1861,6 +1861,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Moq": "4.20.69",
+          "Newtonsoft.Json": "13.0.1",
           "Swashbuckle.AspNetCore": "6.5.0",
           "xunit.assert": "2.4.2",
           "xunit.extensibility.core": "2.4.2"

@@ -72,3 +72,4 @@ C:\Users\mpbux\source\repos\CalculatorGit\Calculator\Calculator\obj\Debug\net6.0
 C:\Users\mpbux\source\repos\CalculatorGit\Calculator\Calculator\obj\Debug\net6.0\Calculator.pdb
 C:\Users\mpbux\source\repos\CalculatorGit\Calculator\Calculator\obj\Debug\net6.0\Calculator.genruntimeconfig.cache
 C:\Users\mpbux\source\repos\CalculatorGit\Calculator\Calculator\obj\Debug\net6.0\ref\Calculator.dll
+C:\Users\mpbux\source\repos\CalculatorGit\Calculator\Calculator\bin\Debug\net6.0\Newtonsoft.Json.dll

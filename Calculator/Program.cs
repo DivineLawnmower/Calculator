@@ -40,6 +40,10 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddTransient<IExpressionValidator, ExpressionValidator>();
 builder.Services.AddTransient<IEvaluator, Evaluator>();
 builder.Services.AddTransient<ICalculatorService, CalculatorService>();
+builder.Services.AddDistributedMemoryCache();
+
+
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -50,6 +54,8 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseMiddleware<ApiKeyMiddleware>();
+app.UseMiddleware<RateLimitMiddleware>();
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

@@ -1,4 +1,5 @@
-﻿using Calculator.Services.Calculator;
+﻿using Calculator.Decorators;
+using Calculator.Services.Calculator;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,8 +17,8 @@ namespace Calculator.Controllers
             _contextAccessor = httpContextAccessor;
         }     
 
-        // POST: Calculate/Create
         [HttpPost]
+        [LimitRequest(MaxRequests = 2, TimeWindow = 5)]
         public IActionResult CalculateExpression(string expression)
         {
             try
