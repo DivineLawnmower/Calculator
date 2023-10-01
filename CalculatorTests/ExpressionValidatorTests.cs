@@ -32,55 +32,46 @@ namespace CalculatorTests
         [Fact]
         public void AddRule_RuleAddedSuccessfully()
         {
-            // Arrange
             var validator = new ExpressionValidator();
-            var rule = new MockExpressionValidationRule(); // Replace with a mock rule implementation.
 
-            // Act
+            var rule = new MockExpressionValidationRule(); 
+
             validator.AddRule(rule);
 
-            // Assert
             var rules = GetRules(validator);
 
-            // Assert
             Assert.Contains(rule, rules);
         }
 
         [Fact]
         public void RemoveRule_RuleRemovedSuccessfully()
         {
-            // Arrange
             var validator = new ExpressionValidator();
-            var rule = new MockExpressionValidationRule(); // Replace with a mock rule implementation.
+
+            var rule = new MockExpressionValidationRule();
+
             validator.AddRule(rule);
 
-            // Act
             validator.RemoveRule(rule);
 
-            // Assert
             var rules = GetRules(validator);
 
-            // Assert
             Assert.DoesNotContain(rule, rules);
         }
 
         [Fact]
         public void RemoveRules_AllRulesRemovedSuccessfully()
         {
-            // Arrange
             var validator = new ExpressionValidator();
-            var rule1 = new MockExpressionValidationRule(); // Replace with a mock rule implementation.
-            var rule2 = new MockExpressionValidationRule(); // Replace with a mock rule implementation.
+            var rule1 = new MockExpressionValidationRule(); 
+            var rule2 = new MockExpressionValidationRule(); 
             validator.AddRule(rule1);
             validator.AddRule(rule2);
 
-            // Act
             validator.RemoveRules();
 
-            // Assert
             var rules = GetRules(validator);
 
-            // Assert
             Assert.Empty(rules);
         }
 

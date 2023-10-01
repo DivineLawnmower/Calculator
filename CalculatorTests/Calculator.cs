@@ -105,7 +105,6 @@ namespace CalculatorTests
         [Fact]
         public void Calculate_ValidExpression_ReturnsResult()
         {
-            // Arrange
             var validatorMock = new Mock<IExpressionValidator>();
             validatorMock.Setup(v => v.Validate(It.IsAny<string>())).Returns(new ValidationResponse());
 
@@ -122,10 +121,8 @@ namespace CalculatorTests
 
             var calculatorService = new CalculatorService(validatorMock.Object, evaluatorMock.Object);
 
-            // Act
             var result = calculatorService.Calculate("4+5*2");
 
-            // Assert
             Assert.Equal(14, result.Result);
             validatorMock.Verify(v => v.Validate("4+5*2"), Times.Once);
             evaluatorMock.Verify(e => e.Evaluate("4+5*2"), Times.Once);
