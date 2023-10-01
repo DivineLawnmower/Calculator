@@ -19,12 +19,13 @@ namespace CalculatorTests
             return (List<IExpressionValidationRule>)fieldInfo.GetValue(validator);
         }
 
-        [Fact]
-        public void Validate_EmptyRules_ReturnsSuccess()
+        [Theory]
+        [InlineData("test expression")]
+        public void Validate_EmptyRules_ReturnsSuccess(string expression)
         {
             var validator = new ExpressionValidator();
 
-            var result = validator.Validate("test expression");
+            var result = validator.Validate(expression);
 
             Assert.True(result.Success);
         }
@@ -86,7 +87,18 @@ namespace CalculatorTests
 
             Assert.False(result.Success);
         }
+        [Theory]
+        [InlineData("2+2")]
+        public void Validate_WithFailingRule_ReturnsValidatioSuccess(string expression)
+        {
+            var validator = new ExpressionValidator();
+            var failingRule = new ContainsInvalidCharacters();
+            validator.AddRule(failingRule);
 
+            var result = validator.Validate(expression);
+
+            Assert.True(result.Success);
+        }
     }
 
 }
