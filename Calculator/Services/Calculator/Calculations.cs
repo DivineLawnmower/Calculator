@@ -10,7 +10,24 @@ namespace Calculator.Services.Calculator
             string Token { get; }
             double Calculate(double a, double b);
         }
-
+        public class Modulus : IOperation
+        {
+            public int Precedence { get { return 2; } }
+            public string Token { get { return "%"; } }
+            public double Calculate(double a, double b)
+            {
+                return a % b;
+            }
+        }
+        public class Order : IOperation
+        {
+            public int Precedence { get { return 3; } }
+            public string Token { get { return "^"; } }
+            public double Calculate(double a, double b)
+            {
+                return Math.Pow(a, b);
+            }
+        }
         public class Addition : IOperation
         {
             public int Precedence { get { return 1; } }

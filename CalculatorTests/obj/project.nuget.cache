@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o+ZLWH3OthrPai1S4asL8jKE9clanh3MKz3mJOMvula7IjTb2l/RuKBRG6OP+LBa6MCPBawa4qZA8wlCeJisug==",
+  "dgSpecHash": "1EalQGhCWLXMCdrrAt+a4iYO78BaYq0Odt8P52JfQ+z/nqN7hLu249zLfoNzDlMFmV0VfNEYHp3VI9IcUyK+Hw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mpbux\\source\\repos\\Calculator\\CalculatorTests\\CalculatorTests.csproj",
+  "projectFilePath": "C:\\Users\\mpbux\\source\\repos\\CalculatorGit\\Calculator\\CalculatorTests\\CalculatorTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mpbux\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\mpbux\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",

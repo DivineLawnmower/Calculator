@@ -5227,11 +5227,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mpbux\\source\\repos\\Calculator\\Calculator\\Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\mpbux\\source\\repos\\CalculatorGit\\Calculator\\Calculator\\Calculator.csproj",
       "projectName": "Calculator",
-      "projectPath": "C:\\Users\\mpbux\\source\\repos\\Calculator\\Calculator\\Calculator.csproj",
+      "projectPath": "C:\\Users\\mpbux\\source\\repos\\CalculatorGit\\Calculator\\Calculator\\Calculator.csproj",
       "packagesPath": "C:\\Users\\mpbux\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mpbux\\source\\repos\\Calculator\\Calculator\\obj\\",
+      "outputPath": "C:\\Users\\mpbux\\source\\repos\\CalculatorGit\\Calculator\\Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
