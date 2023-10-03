@@ -15,23 +15,28 @@ namespace Calculator.Controllers
         {
             _calculatorService = calculatorService;
             _contextAccessor = httpContextAccessor;
-        }     
+        }
+
 
         [HttpPost]
         [LimitRequest(MaxRequests = 2, TimeWindow = 5)]
-        public IActionResult CalculateExpression(string expression)
+        public IActionResult CalculateExpression([FromBody] ExpressionModel expression)
         {
             try
             {
-
-                var result = _calculatorService.Calculate(expression);
-                if(result.Success)
+                if (expression == null || string.IsNullOrWhiteSpace(expression.Expression))
+                {
+                    return BadRequest("Invalid Expression");
+                }
+                string toCalculate = expression.Expression;
+                var result = _calculatorService.Calculate(toCalculate);
+                if (result.Success)
                 {
                     return Ok(result.Result);
-                } 
-                return BadRequest(result.Message);  
+                }
+                return BadRequest(result.Message);
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
