@@ -1,4 +1,5 @@
 ﻿using Calculator.Decorators;
+using Calculator.Models;
 using Calculator.Services.Calculator;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
