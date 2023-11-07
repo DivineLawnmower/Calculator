@@ -3,7 +3,7 @@ name: calculator
 services:
     api:
         container_name: calculator-web-api
-        image: calculator-api:latest
+        image: products-crud-api:latest
         environment:
             - ASPNETCORE_ENVIRONMENT=docker
             - ASPNETCORE_URLS=http://+:80
